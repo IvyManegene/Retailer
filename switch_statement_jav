@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Retailer {
+    public static void main(String[] args) {
+        int choice, quantity;
+        double total1, total2, total3, total4, total5, totalRetail;
+        total1 = total2 = total3 = total4 = total5  = 0;
+
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true){
+            System.out.println("-----------------PRODUCT MENU----------------");
+            System.out.println("Choice\tProductNumber\tRetailPrice\t");
+            System.out.println("1\t\tProduct 1\t\tKsh.245.50");
+            System.out.println("2\t\tProduct 2\t\tKsh.356.50");
+            System.out.println("3\t\tProduct 3\t\tKsh.950.00");
+            System.out.println("4\t\tProduct 4\t\tKsh.480.00");
+            System.out.println("5\t\tProduct 5\t\tKsh.680.00");
+            System.out.println("0\t\t---------Exit program-------");
+            System.out.print("Enter product number: ");
+            choice = sc.nextInt();
+
+            if(choice ==0){
+                break;}
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter the quantity sold-> ");
+                    quantity = sc.nextInt();
+                    total1 = total1 + 245.50 * quantity;
+                    break;
+                case 2:
+                    System.out.print("Enter the quantity sold-> ");
+                    quantity = sc.nextInt();
+                    total2 = total2 + 356.50 * quantity;
+                    break;
+                case 3:
+                    System.out.print("Enter the quantity sold-> ");
+                    quantity = sc.nextInt();
+                    total3 = total3 + 950.00 * quantity;
+                    break;
+                case 4:
+                    System.out.print("Enter the quantity sold-> ");
+                    quantity = sc.nextInt();
+                    total4 = total4 + 480.00 * quantity;
+                    break;
+                case 5:
+                    System.out.print("Enter the quantity sold-> ");
+                    quantity = sc.nextInt();
+                    total5 = total5 + 680.00 * quantity;
+                    break;
+                default:
+                    System.out.println("Invalid Input!!");
+            }
+        }
+        totalRetail = total1 + total2 + total3 + total4 + total5;
+        System.out.println("\nThe total retail value of all products sold: Ksh. "+totalRetail);
+    }
+}
